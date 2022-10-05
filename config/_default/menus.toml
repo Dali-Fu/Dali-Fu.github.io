@@ -1,0 +1,49 @@
+# Navigation Links
+#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
+#     desired widget in your `content/home/` folder.
+#   The weight parameter defines the order that the links will appear in.
+
+[[main]]
+  name = "Home"
+  url = "#about"
+  weight = 10
+
+[[main]]
+  name = "Research"
+  url = "#publications"
+  weight = 40
+
+[[main]]
+  name = "Code"
+  url = "#code"
+  weight = 50
+
+# [[main]]
+#   name = "Projects"
+#   url = "#projects"
+#   weight = 60
+
+# [[main]]
+#   name = "Slider"
+#   url = "#slider"
+#   weight = 70
+
+[[main]]
+  name = "Contact"
+  url = "#contact"
+  weight = 80
+
+[[main]]
+  name = "中文简历"
+  url = "https://www.xinhesean.com/files/cv/cv-chinese.pdf"
+  weight = 81
+  
+[[main]]
+  name = "CV"
+  url = "https://www.xinhesean.com/files/cv-xinhe/cv-xinhe.pdf"
+  weight = 82
+
+[[main]]
+  name = "SSRN"
+  url = "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3071233"
+  weight = 83
