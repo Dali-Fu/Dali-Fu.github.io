@@ -86,8 +86,8 @@ author:
   employer         :
   pubmed           : 
   googlescholar    : 
-  email            :
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
+  email            :  "mailto:dali_fu@smail.nju.edu.cn"
+  researchgate     :  "https://www.researchgate.net/profile/Dali_Fu"
   uri              :
   bitbucket        :
   codepen          :
