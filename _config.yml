@@ -8,11 +8,11 @@
 locale                   : "en-US"
 title                    : "Home"
 title_separator          : "-"
-name                     : &name "Yu Yi"
-description              : &description "PhD candidate at London School of Economics"
-url                      : https://ivanyyi.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : &name "Daily Fu"
+description              : &description "Ph.D. Candidate at Department of Economics,Nanjing University"
+url                      : https://dali-fu.github.io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "ivanyyi.github.io"
+repository               : "Dali-Fu.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -79,10 +79,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Yu Yi"
+  name             : "Daily Fu"
   avatar           : "temp2.jpg"
   bio              : "PhD candidate in Economics"
-  location         : "London, U.K."
+  location         : "Nanjing, China."
   employer         :
   pubmed           : 
   googlescholar    : 
@@ -95,7 +95,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "IvanYYi"
+  github           : "Dali-Fu"
   google_plus      :
   keybase          :
   instagram        :
@@ -108,7 +108,7 @@ author:
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "ivanyyi"
+  twitter          : "Daily"
   vine             :
   weibo            :
   xing             :
