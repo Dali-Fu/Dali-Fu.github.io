@@ -1,7 +1,7 @@
 ---
 permalink: /
-title: "Yu (Ivan) Yi"
-excerpt: "Yi, Yu"
+title: "付大利(Daily Fu)"
+excerpt: "Daily, Fu"
 author_profile: true
 redirect_from: 
   - /about/
