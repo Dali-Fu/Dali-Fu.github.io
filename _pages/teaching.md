@@ -16,12 +16,9 @@ author_profile: true
 ## Graduate Level
 
 * DSGE与dynare实践, 南京大学, 2022秋季学期
-  [notes](https://Dali-Fu.github.io/files/Lecture/ref/elegantbook-cn.pdf) 
-  [slides]( https://Dali-Fu.github.io/files/Lecture/ref/Dynare操作.pptx)
-  code
-  * matlab_intro
-  * neoclasscial_growth
-  * RBC
+  [*notes*](https://Dali-Fu.github.io/files/Lecture/out/elegantbook-cn.pdf) 
+  [*slides*]( https://Dali-Fu.github.io/files/Lecture/out/Dynare操作.pdf)
+  [*code*](https://Dali-Fu.github.io/files/Lecture/code&data.zip)
 
 ## Undergraduate Level
 
