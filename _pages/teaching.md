@@ -16,18 +16,15 @@ author_profile: true
 ## Graduate Level
 
 * DSGE与dynare实践, 南京大学, 2022秋季学期
-  [*notes*](https://Dali-Fu.github.io/files/Lecture/out/elegantbook-cn.pdf) 
-  [*slides*]( https://Dali-Fu.github.io/files/Lecture/out/Dynare操作.pdf)
-  [*code*](https://Dali-Fu.github.io/files/Lecture/code&data.zip)
+  [*[notes]*](https://Dali-Fu.github.io/files/Lecture/out/elegantbook-cn.pdf) 
+  [*[slides]*]( https://Dali-Fu.github.io/files/Lecture/out/Dynare操作.pdf)
+  [*[code]*](https://Dali-Fu.github.io/files/Lecture/code&data.zip)
 
 ## Undergraduate Level
 
 * Python 数据处理, 南京审计大学，2018 秋季学期
-* （EC221 Principles of Econometrics, LSE, 2018-2021）
+* (Python for Data Analysis, NAU, 2018 Fall）
 * 应用时间序列分析与R 语言, 南京审计大学，2019 春季学期
-* （International Economics, Wuhan University, 2015-2016）
-* C 语言程序设计,南京审计大学， 2019 秋季学期 
-* （Ordinary Differential Equations, Wuhan University, 2015-2016）                                                                                                                   
-                                                                                                                                                                                                                         
+* (Time Series Analysis with Applications in R, NAU, 2019 Spring）                                                                                                                                                                                                                                                                                                                                        
 
 
