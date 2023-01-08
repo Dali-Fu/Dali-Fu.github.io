@@ -20,6 +20,8 @@ author_profile: true
   [*[slides]*]( https://Dali-Fu.github.io/files/Lecture/out/Dynare操作.pdf)
   [*[code]*](https://Dali-Fu.github.io/files/Lecture/code&data.zip)
 
+* (DSGE with dynare, NJU, 2022 Fall)
+
 ## Undergraduate Level
 
 * Python 数据处理, 南京审计大学，2018 秋季学期
