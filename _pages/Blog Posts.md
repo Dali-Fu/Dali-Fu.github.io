@@ -3,6 +3,7 @@ layout: archive
 title: "Blog Post"
 permalink: /blog posts/
 author_profile: true
+typora-copy-images-to: upload
 ---
 
 ### [中国宏观之谜](https://www.jianguoyun.com/p/DYbdIIAQjtiKCRje5vQEIAA)
@@ -11,9 +12,10 @@ author_profile: true
 
 
 
-![流动性](https://github.com/Dali-Fu/Dali-Fu.github.io/blob/348c5b07e3a55d925ced4067f959e189b2852422/images/self.png
+![](https://github.com/Dali-Fu/Dali-Fu.github.io/blob/main/images/self.png)
 
-![avatar](http://baidu.com/pic/doge.png)
+<img src="https://img2018.cnblogs.com/blog/1816212/201911/1816212-20191106005633853-668571180.png" width = "500" />
 
-![avatar1](https://github.com/Dali-Fu/Dali-Fu.github.io/blob/main/images/self.png)
+<img src="https://github.com/Dali-Fu/Dali-Fu.github.io/blob/main/images/self.png" width = "500" />
 
+![](W:%5CGitHub%5Cwebsite%5Cimages%5Cself.png)
