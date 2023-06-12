@@ -37,7 +37,7 @@ text-align: justify}
 
 
 
-## Work in Progress
+## [Work in Progress](https://Dali-Fu.github.io/files/Research Proposal.html)
 
 * [数字货币、货币政策工具与最优货币规则]
 

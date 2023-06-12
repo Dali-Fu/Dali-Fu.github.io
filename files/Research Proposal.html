@@ -1,0 +1,836 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --mermaid-theme: default; --mermaid-sequence-numbers: off; --mermaid-flowchart-curve: linear; --mermaid--gantt-left-padding: 75; --sequence-theme: simple; }
+
+
+:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; outline: 0px; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: auto hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 10px; z-index: 3; overflow-y: hidden; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; inset: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+span.cm-underlined { text-decoration: underline; }
+span.cm-strikethrough { text-decoration: line-through; }
+.cm-tw-syntaxerror { color: rgb(255, 255, 255); background-color: rgb(153, 0, 0); }
+.cm-tw-deleted { text-decoration: line-through; }
+.cm-tw-header5 { font-weight: 700; }
+.cm-tw-listitem:first-child { padding-left: 10px; }
+.cm-tw-box { border-style: solid; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-color: inherit; border-top-width: 0px !important; }
+.cm-tw-underline { text-decoration: underline; }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+
+
+mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+  min-height: 1px;
+  min-width: 1px;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line], svg[data-table] > g > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame], svg[data-table] > g > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed, svg[data-table] > g > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted, svg[data-table] > g > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > g > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
+  stroke-width: 3;
+}
+
+g[data-mml-node="xypic"] path {
+  stroke-width: inherit;
+}
+
+.MathJax g[data-mml-node="xypic"] path {
+  stroke-width: inherit;
+}
+mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
+							stroke-width: 0;
+						}
+</style><title>Research Proposal</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=' first-line-indent'><h1 id='研究计划'><span>研究计划</span></h1><ul><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>本学期汇报论文</span></p><ul><li><span>Carlstrom, Charles T., Timothy S. Fuerst, and Matthias Paustian. 2017. &quot;Targeting Long Rates in a Model with Segmented Markets.&quot; </span><em><span>American Economic Journal: Macroeconomics</span></em><span>, 9 (1): 205-42.DOI: 10.1257/mac.20150179</span></li><li><span>The Mortgage Credit Channel of Macroeconomic Transmission JPE R&amp;R</span></li><li><mark><span>Eric Sims and Jing Cynthia Wu “Evaluating Central Banks’ Tool Kit: Past, Present, and Future”, </span><em><span>Journal of Monetary Economics</span></em><span>, 2021, 118, 135-160.</span></mark></li><li><span>Eric Sims, Jing Cynthia Wu, and Ji Zhang “The Four Equation New Keynesian Model”, </span><em><span>The</span></em><span> </span><em><span>Review of Economics and Statistics</span></em><span>, forthcoming.</span></li></ul></li><li class='md-task-list-item task-list-item task-list-done' ><input type='checkbox' checked/><p><span>6-10 论文讲解结束</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>6-11 南大论文截止</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>6-12 眼科医生</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>6月25日   会议</span></p></li></ul><figure><table><thead><tr><th style='text-align:left;' ><span>阶段</span></th><th style='text-align:left;' ><span>任务</span></th><th style='text-align:left;' ><span>DDL</span></th></tr></thead><tbody><tr><td style='text-align:left;' ><strong><span>准备阶段</span></strong></td><td style='text-align:left;' ><span>文献搜集</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>模型精选</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>基本复现</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' ><strong><span>实验阶段1</span></strong></td><td style='text-align:left;' ><span>数据搜集</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>数据处理</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' ><strong><span>实验阶段2</span></strong></td><td style='text-align:left;' ><span>统计分析</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>实证分析</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' ><strong><span>实验阶段3</span></strong></td><td style='text-align:left;' ><span>厘清机制</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>构建模型</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>数值模拟</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>结果输出</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' ><strong><span>撰写阶段</span></strong></td><td style='text-align:left;' ><span>文献搜集</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>内容填写</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>格式调整</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' >&nbsp;</td><td style='text-align:left;' ><span>内容填写</span></td><td style='text-align:left;' >&nbsp;</td></tr></tbody></table></figure><h3 id='主题'><span>主题</span></h3><ol start='' ><li><p><mark><span>CBDC</span></mark></p><ol start='' ><li><span>CBDC与商业银行流动性</span></li><li><span>CBDC与金融脱媒（挤出存款）</span></li></ol></li><li><p><span>数字经济</span></p><ol start='' ><li><span>产业数字化的周期平抑效应</span></li></ol></li></ol><h2 id='准备工作'><span>准备工作</span></h2><h3 id='文献搜集-1'><span>文献搜集</span></h3><h3 id='模型精选'><span>模型精选</span></h3><h3 id='模型基本复现'><span>模型基本复现</span></h3><p>&nbsp;</p><ul><li><p><span>CBDC </span></p><ul><li><span>刘晓星（2016）流动性冲击</span></li><li><span>村上正夫（2022）银行卡与福利分析</span></li><li><span>CW09</span></li><li><span>GM07</span></li><li><span>Eric Sims</span></li><li><span>康奈尔讲义</span></li><li><span>the Macroeffects of financial shocks AER</span></li></ul></li><li><p><span>数字经济</span></p><ul><li><span>谢丹夏 et al.management science</span></li><li><mark><span>刘凯（2018）</span></mark></li><li><mark><span>统计研究（2022）&amp;RED(2012)&amp;AEJ:Macro(2015)</span></mark></li><li><span>宋铮、王鹏飞、查涛，workingpaper（李剑主讲）EJ</span></li><li><span>宋铮、王鹏飞、查涛，land price</span></li><li><u><span>AER&amp;AEJ-Housing Matteo 2005-AER,Matteo 2010-AEJ</span></u></li></ul></li></ul><h2 id='实验阶段'><span>实验阶段</span></h2><h3 id='搜集数据与数据处理'><span>搜集数据与数据处理</span></h3><ul><li><p><span>数据搜集</span></p><ul><li><span>资本成本（上市公司）秋风</span></li><li><span>老龄化、人工智能&amp;经济增长</span></li><li><span>数字人民币APP下载量</span></li><li><span>百度搜索指数（分地区）</span></li><li><span>存贷款数据（地级市月度）</span></li><li><span>存贷款数据（地级市）</span></li><li><span>商业银行理财数据（理财产品募集期）</span></li><li><span>中间产品的投入产出表</span></li></ul></li></ul><h3 id='实验'><span>实验</span></h3><h3 id='结果输出'><span>结果输出</span></h3><h2 id='撰写阶段'><span>撰写阶段</span></h2><h3 id='文献搜集-2'><span>文献搜集</span></h3><h3 id='内容填写'><span>内容填写</span></h3><h3 id='格式调整'><span>格式调整</span></h3><h2 id='some-ideas'><span>Some Ideas</span></h2><h4 id='1-企业金融化与资本成本'><span>1. 企业金融化与资本成本</span></h4><p><span>the Macroeffects of financial shocks。股权调整成本存在的金融摩擦，放大了周期波动。</span></p><p><span>股权支出、债务支出对应的就是资本成本</span></p><p><span>金融冲击，使用残差方法计算的除TFP的计算方法</span></p><p><span>金融摩擦（股权调整成本）</span></p><p><span>金融冲击</span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="3.706ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1638 522" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.025ex;"><defs><path id="MJX-16-TEX-N-27F6" d="M84 237T84 250T98 270H1444Q1328 357 1301 493Q1301 494 1301 496T1300 499Q1300 511 1317 511H1320Q1329 511 1332 510T1338 506T1341 497T1344 481T1352 456Q1374 389 1425 336T1544 261Q1553 258 1553 250Q1553 244 1548 241T1524 231T1486 212Q1445 186 1415 152T1370 85T1349 35T1341 4Q1339 -6 1336 -8T1320 -11Q1300 -11 1300 0Q1300 7 1305 25Q1337 151 1444 230H98Q84 237 84 250Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><use data-c="27F6" xlink:href="#MJX-16-TEX-N-27F6"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">⟶</mo></math></mjx-assistive-mml></mjx-container><script type="math/tex">\longrightarrow</script><span>周期波动</span></p><p><span>                 </span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="1.382ex" height="2.009ex" role="img" focusable="false" viewBox="0 -694 611 888" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.439ex;"><defs><path id="MJX-10-TEX-N-21D1" d="M228 -179Q227 -180 226 -182T223 -186T221 -189T218 -192T214 -193T208 -194Q196 -194 189 -181L188 125V430L176 419Q122 369 59 338Q46 330 40 330Q38 330 31 337V350Q31 362 33 365T46 374Q60 381 77 390T128 426T190 484T247 567T292 677Q295 688 298 692Q302 694 305 694Q313 694 318 677Q334 619 363 568T420 485T481 427T532 391T564 374Q575 368 577 365T579 350V337Q572 330 570 330Q564 330 551 338Q487 370 435 419L423 430L422 125V-181Q409 -194 401 -194Q397 -194 394 -193T388 -189T385 -184T382 -180V-177V475L373 487Q331 541 305 602Q304 601 300 591T290 571T278 548T260 519T238 488L229 476L228 148V-179Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><use data-c="21D1" xlink:href="#MJX-10-TEX-N-21D1"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">⇑</mo></math></mjx-assistive-mml></mjx-container><script type="math/tex">\Uparrow</script></p><p><span>          金融摩擦</span></p><div class="md-diagram-panel md-fences-adv-panel"><svg id="mermaidChart0" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="264.01873779296875" style="max-width: 463.01251220703125px;" viewBox="0 0 463.01251220703125 264.01873779296875"><style>#mermaidChart0{font-family:sans-serif;font-size:16px;fill:#333;}#mermaidChart0 .error-icon{fill:#552222;}#mermaidChart0 .error-text{fill:#552222;stroke:#552222;}#mermaidChart0 .edge-thickness-normal{stroke-width:2px;}#mermaidChart0 .edge-thickness-thick{stroke-width:3.5px;}#mermaidChart0 .edge-pattern-solid{stroke-dasharray:0;}#mermaidChart0 .edge-pattern-dashed{stroke-dasharray:3;}#mermaidChart0 .edge-pattern-dotted{stroke-dasharray:2;}#mermaidChart0 .marker{fill:#333333;}#mermaidChart0 .marker.cross{stroke:#333333;}#mermaidChart0 svg{font-family:sans-serif;font-size:16px;}#mermaidChart0 .label{font-family:sans-serif;color:#333;}#mermaidChart0 .label text{fill:#333;}#mermaidChart0 .node rect,#mermaidChart0 .node circle,#mermaidChart0 .node ellipse,#mermaidChart0 .node polygon,#mermaidChart0 .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#mermaidChart0 .node .label{text-align:center;}#mermaidChart0 .node.clickable{cursor:pointer;}#mermaidChart0 .arrowheadPath{fill:#333333;}#mermaidChart0 .edgePath .path{stroke:#333333;stroke-width:1.5px;}#mermaidChart0 .flowchart-link{stroke:#333333;fill:none;}#mermaidChart0 .edgeLabel{background-color:#e8e8e8;text-align:center;}#mermaidChart0 .edgeLabel rect{opacity:0.5;background-color:#e8e8e8;fill:#e8e8e8;}#mermaidChart0 .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#mermaidChart0 .cluster text{fill:#333;}#mermaidChart0 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:sans-serif;font-size:12px;background:hsl(80,100%,96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#mermaidChart0:root{--mermaid-font-family:sans-serif;}#mermaidChart0:root{--mermaid-alt-font-family:sans-serif;}#mermaidChart0 flowchart-v2{fill:apa;}</style><g transform="translate(0, 0.4687490463256836)"><marker id="flowchart-pointEnd" class="marker flowchart" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker><marker id="flowchart-pointStart" class="marker flowchart" viewBox="0 0 10 10" refX="0" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M 0 5 L 10 10 L 10 0 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker><marker id="flowchart-circleEnd" class="marker flowchart" viewBox="0 0 10 10" refX="11" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></circle></marker><marker id="flowchart-circleStart" class="marker flowchart" viewBox="0 0 10 10" refX="-1" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></circle></marker><marker id="flowchart-crossEnd" class="marker cross flowchart" viewBox="0 0 11 11" refX="12" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"></path></marker><marker id="flowchart-crossStart" class="marker cross flowchart" viewBox="0 0 11 11" refX="-1" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"><path d="M87,73.83750057220459L91.16666666666667,73.83750057220459C95.33333333333333,73.83750057220459,103.66666666666667,73.83750057220459,116.28901047377603,79.60416730244954C128.91135428088538,85.3708340326945,145.82270856177075,96.9041674931844,154.27838570221346,102.67083422342937L162.73406284265613,108.43750095367432" id="L-id1-企业融资决策" class=" edge-thickness-normal edge-pattern-solid flowchart-link LS-id1 LE-企业融资决策" style="fill:none;" marker-end="url(#flowchart-pointEnd)"></path><path d="M87,183.63749980926514L91.16666666666667,183.63749980926514C95.33333333333333,183.63749980926514,103.66666666666667,183.63749980926514,116.28901047377603,177.87083307902017C128.91135428088538,172.10416634877524,145.82270856177075,160.5708328882853,154.27838570221346,154.80416615804037L162.73406284265613,149.0374994277954" id="L-金融摩擦-企业融资决策" class=" edge-thickness-normal edge-pattern-solid flowchart-link LS-金融摩擦 LE-企业融资决策" style="fill:none;" marker-end="url(#flowchart-pointEnd)"></path><path d="M207.57431479811703,108.43750095367432L218.47859566509752,93.75312582651775C229.38287653207803,79.06875069936116,251.191438266039,49.70000044504801,266.541552498142,35.01562531789144C281.89166673024494,20.331250190734863,290.7833334604899,20.331250190734863,295.22916682561237,20.331250190734863L299.67500019073486,20.331250190734863" id="L-企业融资决策-id" class=" edge-thickness-normal edge-pattern-dotted flowchart-link LS-企业融资决策 LE-id" style="fill:none;stroke-width:2px;stroke-dasharray:3;" marker-end="url(#flowchart-pointEnd)"></path><path d="M324.3375005722046,20.331250190734863L328.7833339373271,20.331250190734863C333.2291673024495,20.331250190734863,342.1208340326945,20.331250190734863,355.30363778191935,35.01562531789144C368.48644153114424,49.70000044504801,385.960382299349,79.06875069936116,394.69735268345136,93.75312582651775L403.43432306755375,108.43750095367432" id="L-id-周期波动" class=" edge-thickness-normal edge-pattern-solid flowchart-link LS-id LE-周期波动" style="fill:none;" marker-end="url(#flowchart-pointEnd)"></path><path d="M237.61889390394128,108.43750095367432L243.51574491995106,105.78437582651775C249.41259593596087,103.13125069936116,261.20629796798045,97.82500044504802,271.96148237295455,95.17187531789143C282.71666677792865,92.51875019073486,292.43333355585736,92.51875019073486,297.29166694482166,92.51875019073486L302.150000333786,92.51875019073486" id="L-企业融资决策-id3" class=" edge-thickness-normal edge-pattern-solid flowchart-link LS-企业融资决策 LE-id3" style="fill:none;" marker-end="url(#flowchart-pointEnd)"></path><path d="M321.86250042915344,92.51875019073486L326.7208338181178,92.51875019073486C331.5791672070821,92.51875019073486,341.2958339850108,92.51875019073486,350.8789734675482,95.17187531789143C360.4621129500856,97.82500044504802,369.9117251372317,103.13125069936116,374.6365312308048,105.78437582651775L379.3613373243778,108.43750095367432" id="L-id3-周期波动" class=" edge-thickness-normal edge-pattern-solid flowchart-link LS-id3 LE-周期波动" style="fill:none;" marker-end="url(#flowchart-pointEnd)"></path><path d="M237.61889390394128,149.0374994277954L243.51574491995106,151.690624554952C249.41259593596087,154.34374968210855,261.20629796798045,159.64999993642172,271.507315682446,162.30312506357828C281.8083333969116,164.95625019073486,290.61666679382324,164.95625019073486,295.02083349227905,164.95625019073486L299.42500019073486,164.95625019073486" id="L-企业融资决策-id4" class=" edge-thickness-normal edge-pattern-solid flowchart-link LS-企业融资决策 LE-id4" style="fill:none;" marker-end="url(#flowchart-pointEnd)"></path><path d="M324.5875005722046,164.95625019073486L328.9916672706604,164.95625019073486C333.3958339691162,164.95625019073486,342.20416736602783,164.95625019073486,351.3331401580567,162.30312506357828C360.4621129500856,159.64999993642172,369.9117251372317,154.34374968210855,374.6365312308048,151.690624554952L379.3613373243778,149.0374994277954" id="L-id4-周期波动" class=" edge-thickness-normal edge-pattern-solid flowchart-link LS-id4 LE-周期波动" style="fill:none;" marker-end="url(#flowchart-pointEnd)"></path><path d="M206.98634211574466,149.0374994277954L217.98861842978724,164.45520798365274C228.99089474382978,179.8729165395101,250.9954473719149,210.70833365122476,266.164390432097,226.12604220708212C281.33333349227905,241.54375076293945,289.6666669845581,241.54375076293945,293.83333373069763,241.54375076293945L298.00000047683716,241.54375076293945" id="L-企业融资决策-id5" class=" edge-thickness-normal edge-pattern-solid flowchart-link LS-企业融资决策 LE-id5" style="fill:none;" marker-end="url(#flowchart-pointEnd)"></path><path d="M326.0125002861023,241.54375076293945L330.1791670322418,241.54375076293945C334.34583377838135,241.54375076293945,342.6791672706604,241.54375076293945,355.66132249202656,226.12604220708212C368.6434777133927,210.70833365122476,386.274454663846,179.8729165395101,395.08994313907266,164.45520798365274L403.9054316142993,149.0374994277954" id="L-id5-周期波动" class=" edge-thickness-normal edge-pattern-solid flowchart-link LS-id5 LE-周期波动" style="fill:none;" marker-end="url(#flowchart-pointEnd)"></path></g><g class="edgeLabels"><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span></span></div></foreignObject></g></g></g><g class="nodes"><g class="node default default" id="flowchart-id1-16" transform="translate(47.5, 73.83750057220459)"><circle rx="0" ry="0" r="39.5" width="79" height="40.60000038146973"></circle><g class="label" style="" transform="translate(-32, -12.800000190734863)"><foreignObject width="64" height="25.600000381469727"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span>金融冲击</span></div></foreignObject></g></g><g class="node default default" id="flowchart-企业融资决策-17" transform="translate(192.5, 128.73750019073486)"><rect class="basic label-container" style="" rx="0" ry="0" x="-55.5" y="-20.300000190734863" width="111" height="40.60000038146973"></rect><g class="label" style="" transform="translate(-48, -12.800000190734863)"><foreignObject width="96" height="25.600000381469727"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span>企业融资决策</span></div></foreignObject></g></g><g class="node default default" id="flowchart-金融摩擦-18" transform="translate(47.5, 183.63749980926514)"><rect class="basic label-container" style="" rx="0" ry="0" x="-39.5" y="-20.300000190734863" width="79" height="40.60000038146973"></rect><g class="label" style="" transform="translate(-32, -12.800000190734863)"><foreignObject width="64" height="25.600000381469727"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span>金融摩擦</span></div></foreignObject></g></g><g class="node default default" id="flowchart-id-21" transform="translate(312.0062503814697, 20.331250190734863)"><circle rx="0" ry="0" r="12.331250190734863" width="24.662500381469727" height="40.60000038146973"></circle><g class="label" style="" transform="translate(-4.831250190734863, -12.800000190734863)"><foreignObject width="9.662500381469727" height="25.600000381469727"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span>Y</span></div></foreignObject></g></g><g class="node default default" id="flowchart-周期波动-22" transform="translate(415.51250076293945, 128.73750019073486)"><rect class="basic label-container" style="" rx="0" ry="0" x="-39.5" y="-20.300000190734863" width="79" height="40.60000038146973"></rect><g class="label" style="" transform="translate(-32, -12.800000190734863)"><foreignObject width="64" height="25.600000381469727"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span>周期波动</span></div></foreignObject></g></g><g class="node default default" id="flowchart-id3-24" transform="translate(312.0062503814697, 92.51875019073486)"><circle rx="0" ry="0" r="9.856250047683716" width="19.71250009536743" height="40.60000038146973"></circle><g class="label" style="" transform="translate(-2.356250047683716, -12.800000190734863)"><foreignObject width="4.712500095367432" height="25.600000381469727"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span>I</span></div></foreignObject></g></g><g class="node default default" id="flowchart-id4-27" transform="translate(312.0062503814697, 164.95625019073486)"><circle rx="0" ry="0" r="12.581250190734863" width="25.162500381469727" height="40.60000038146973"></circle><g class="label" style="" transform="translate(-5.081250190734863, -12.800000190734863)"><foreignObject width="10.162500381469727" height="25.600000381469727"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span>K</span></div></foreignObject></g></g><g class="node default default" id="flowchart-id5-30" transform="translate(312.0062503814697, 241.54375076293945)"><circle rx="0" ry="0" r="14.006249904632568" width="28.012499809265137" height="40.60000038146973"></circle><g class="label" style="" transform="translate(-6.506249904632568, -12.800000190734863)"><foreignObject width="13.012499809265137" height="25.600000381469727"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span>N</span></div></foreignObject></g></g></g></g></g></svg></div><p>&nbsp;</p><p>&nbsp;</p><p><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="1.131ex" height="2.007ex" role="img" focusable="false" viewBox="0 -694 500 887" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.437ex;"><defs><path id="MJX-15-TEX-N-2191" d="M27 414Q17 414 17 433Q17 437 17 439T17 444T19 447T20 450T22 452T26 453T30 454T36 456Q80 467 120 494T180 549Q227 607 238 678Q240 694 251 694Q259 694 261 684Q261 677 265 659T284 608T320 549Q340 525 363 507T405 479T440 463T467 455T479 451Q483 447 483 433Q483 413 472 413Q467 413 458 416Q342 448 277 545L270 555V-179Q262 -193 252 -193H250H248Q236 -193 230 -179V555L223 545Q192 499 146 467T70 424T27 414Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><use data-c="2191" xlink:href="#MJX-15-TEX-N-2191"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">↑</mo></math></mjx-assistive-mml></mjx-container><script type="math/tex">\uparrow</script><span>金融冲击</span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="3.706ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1638 522" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.025ex;"><defs><path id="MJX-16-TEX-N-27F6" d="M84 237T84 250T98 270H1444Q1328 357 1301 493Q1301 494 1301 496T1300 499Q1300 511 1317 511H1320Q1329 511 1332 510T1338 506T1341 497T1344 481T1352 456Q1374 389 1425 336T1544 261Q1553 258 1553 250Q1553 244 1548 241T1524 231T1486 212Q1445 186 1415 152T1370 85T1349 35T1341 4Q1339 -6 1336 -8T1320 -11Q1300 -11 1300 0Q1300 7 1305 25Q1337 151 1444 230H98Q84 237 84 250Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><use data-c="27F6" xlink:href="#MJX-16-TEX-N-27F6"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">⟶</mo></math></mjx-assistive-mml></mjx-container><script type="math/tex">\longrightarrow</script><span>企业融资成本</span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="1.131ex" height="2.007ex" role="img" focusable="false" viewBox="0 -694 500 887" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.437ex;"><defs><path id="MJX-15-TEX-N-2191" d="M27 414Q17 414 17 433Q17 437 17 439T17 444T19 447T20 450T22 452T26 453T30 454T36 456Q80 467 120 494T180 549Q227 607 238 678Q240 694 251 694Q259 694 261 684Q261 677 265 659T284 608T320 549Q340 525 363 507T405 479T440 463T467 455T479 451Q483 447 483 433Q483 413 472 413Q467 413 458 416Q342 448 277 545L270 555V-179Q262 -193 252 -193H250H248Q236 -193 230 -179V555L223 545Q192 499 146 467T70 424T27 414Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><use data-c="2191" xlink:href="#MJX-15-TEX-N-2191"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">↑</mo></math></mjx-assistive-mml></mjx-container><script type="math/tex">\uparrow</script><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="3.706ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1638 522" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.025ex;"><defs><path id="MJX-16-TEX-N-27F6" d="M84 237T84 250T98 270H1444Q1328 357 1301 493Q1301 494 1301 496T1300 499Q1300 511 1317 511H1320Q1329 511 1332 510T1338 506T1341 497T1344 481T1352 456Q1374 389 1425 336T1544 261Q1553 258 1553 250Q1553 244 1548 241T1524 231T1486 212Q1445 186 1415 152T1370 85T1349 35T1341 4Q1339 -6 1336 -8T1320 -11Q1300 -11 1300 0Q1300 7 1305 25Q1337 151 1444 230H98Q84 237 84 250Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><use data-c="27F6" xlink:href="#MJX-16-TEX-N-27F6"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">⟶</mo></math></mjx-assistive-mml></mjx-container><script type="math/tex">\longrightarrow</script><span>失业\投资\研发投入\产出</span></p><p><span>                        股权融资成本</span></p><p><span>                        债务融资成本</span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="1.131ex" height="2.007ex" role="img" focusable="false" viewBox="0 -694 500 887" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.437ex;"><defs><path id="MJX-15-TEX-N-2191" d="M27 414Q17 414 17 433Q17 437 17 439T17 444T19 447T20 450T22 452T26 453T30 454T36 456Q80 467 120 494T180 549Q227 607 238 678Q240 694 251 694Q259 694 261 684Q261 677 265 659T284 608T320 549Q340 525 363 507T405 479T440 463T467 455T479 451Q483 447 483 433Q483 413 472 413Q467 413 458 416Q342 448 277 545L270 555V-179Q262 -193 252 -193H250H248Q236 -193 230 -179V555L223 545Q192 499 146 467T70 424T27 414Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><use data-c="2191" xlink:href="#MJX-15-TEX-N-2191"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">↑</mo></math></mjx-assistive-mml></mjx-container><script type="math/tex">\uparrow</script></p><p><span>            </span><strong><span>非金融企业金融化</span></strong><span>扮演了一个什么样的角色？</span></p><p><span>H1:强化了金融冲击的作用</span></p><p><span>H2:弱化了金融冲击的作用</span></p><p><span>机制是什么？</span></p><p><span>邱凤文章的逻辑是</span></p><p>&nbsp;</p><h4 id='1-cbdc与金融脱媒挤出存款商业银行流动性'><span>1. CBDC与金融脱媒、挤出存款、商业银行流动性</span></h4><ul><li><p><span>民营银行的流动性比例与其他银行的流动性比例的走势不同</span></p></li><li><p><span>CBDC</span><mjx-container class="MathJax" jax="SVG" style="position: relative;"><svg xmlns="http://www.w3.org/2000/svg" width="3.706ex" height="1.181ex" role="img" focusable="false" viewBox="0 -511 1638 522" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style="vertical-align: -0.025ex;"><defs><path id="MJX-16-TEX-N-27F6" d="M84 237T84 250T98 270H1444Q1328 357 1301 493Q1301 494 1301 496T1300 499Q1300 511 1317 511H1320Q1329 511 1332 510T1338 506T1341 497T1344 481T1352 456Q1374 389 1425 336T1544 261Q1553 258 1553 250Q1553 244 1548 241T1524 231T1486 212Q1445 186 1415 152T1370 85T1349 35T1341 4Q1339 -6 1336 -8T1320 -11Q1300 -11 1300 0Q1300 7 1305 25Q1337 151 1444 230H98Q84 237 84 250Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><use data-c="27F6" xlink:href="#MJX-16-TEX-N-27F6"></use></g></g></g></svg><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">⟶</mo></math></mjx-assistive-mml></mjx-container><script type="math/tex">\longrightarrow</script><span>商业银行的流动性</span></p><ul><li><span>H1:强化了流动性</span></li><li><span>H2:弱化了流动性</span></li></ul></li><li><p><span>作用机制：</span></p><ul><li><p><span>H2比较符合经济直觉，挤出存款机制。</span></p></li><li><p><span>H1较反直觉，可能的机制：</span></p><ol start='' ><li><span>对于银行理财产品的募集期</span></li></ol><ul><li><span>对于大型商业银行</span></li><li><span>对于城商行</span></li><li><span>对于民营银行 </span></li></ul><ol start='3' ><li><span>作为央行负债的性质，与第三方非金融机构在央行的存款（备付金）</span></li></ol><ul><li><span>第三方支付存放备付金之前，对商业银行的流动性</span></li><li><span>第三方支付存放备付金之后，对商业银行的流动性</span></li></ul></li></ul></li><li><p><span>变量测度</span></p><ol start='' ><li><p><span>数字人民币（CBDC）</span></p></li><li><p><span>商业银行流动性</span></p><p><span>银行业同业拆借利率Shibor，（TS）时间序列</span></p><p><span>银行流动覆盖率（PD）</span></p><p><span>存贷比</span></p></li><li><p><span>可能的机制变量</span></p><p><span>商业银行流动性补充机制，理财产品募集</span></p><p><span>第三方支付存放备付金</span></p></li></ol></li><li><p><span>模型设计</span></p><ul><li><span>VAR</span></li><li><span>PANNEL </span></li></ul></li></ul><p>&nbsp;</p><h4 id='2产业数字化的周期平抑效应'><span>2.产业数字化的周期平抑效应</span></h4><p><span>一个行业的生产链越长，其降价速度越快，</span><em><span>价格粘性越弱</span></em><span>，摩擦越弱，而一个国家的生产链越多，其GDP增长速度越快</span><sup class='md-footnote'><a href='#dfref-footnote-1' name='ref-footnote-1'>1</a></sup><span>。 </span></p><p><span>本研究提供了一个新的理论结果，即</span><mark><span>长期利率的下降</span></mark><span>可以引发市场领导者相对于市场追随者更强烈的投资反应，从而导致市场更加集中，利润更高，总生产率增长更低。 较低利率对市场集中度的这种战略影响意味着，随着利率接近于零，总生产率增长会下降。 该框架与低利率环境下的反垄断政策相关，它为随着经济利率降至极低水平,</span><mark><span>市场集中度上升</span></mark><span>和生产率增长下降提供了一个统一的解释，因为经济利率已降至极低水平</span><sup class='md-footnote'><a href='#dfref-footnote-2' name='ref-footnote-2'>2</a></sup></p><p><span>我们开发了一个与数据的两个重要特征一致的银行危机模型：第一，银行危机通常在信贷繁荣之前发生。其次，信贷繁荣通常不会导致危机。也就是说，在Gorton和Ordonez（2019）的语言中，既有“好”繁荣，也有“坏”繁荣。然后，我们考虑最优宏观审慎政策如何权衡防止危机的益处与阻止繁荣的代价。我们表明，逆周期资本缓冲是成功宏观经济政策的关键特征。</span><sup class='md-footnote'><a href='#dfref-footnote-3' name='ref-footnote-3'>3</a></sup></p><p><span>战后时期，</span><mark><span>金融财富不平等</span></mark><span>和长期实际利率密切相关。我们调查了在多大程度上可以通过</span><mark><span>利率下降</span></mark><span>来解释衡量的不平等的增加，以及这对总财富（终身消费）不平等的影响。我们估计金融投资组合在家庭层面的利率敞口，以表明投资组合重估中存在足够的异质性，可以解释自20世纪80年代以来</span><mark><span>金融财富不平等加剧</span></mark><span>的75%。根据这些数据校准的标准不完全市场模型表明，利率下降并非消费中性。相反，低财富的年轻人失去了，而高财富的老年人获得了</span><sup class='md-footnote'><a href='#dfref-footnote-4' name='ref-footnote-4'>4</a></sup><span>。</span></p><p><span>我研究了抵押贷款市场的结构如何影响宏观经济动态，使用具有可提前偿还债务的一般均衡框架和抵押贷款支付与收入比率的限制——事实证明这些特征对于重现观察到的债务动态至关重要。 由此产生的环境放大了从</span><mark><span>利率到债务</span></mark><span>、房价和经济活动的传导。 货币政策更容易稳定通胀，但会导致信贷增长出现更大的波动。 放宽支付收入标准对于解释最近的繁荣似乎至关重要。 支付收入比率上限，而不是贷款价值比率，是限制繁荣-萧条周期的更有效的宏观审慎政策</span><sup class='md-footnote'><a href='#dfref-footnote-5' name='ref-footnote-5'>5</a></sup><span>。</span></p><p><span>我们在一个中等规模的新凯恩斯主义模型中量化了不平等与商业周期之间的联系，该模型具有易于处理的家庭异质性，并使用汇总和横截面数据进行了估计。我们发现不平等会大大放大周期性波动。 这种放大的主要来源是周期性的预防性储蓄行为。储户减少消费，以确保自己免受收入大幅下降的特殊风险，这种风险在经济衰退时会上升</span><sup class='md-footnote'><a href='#dfref-footnote-6' name='ref-footnote-6'>6</a></sup><span>。</span></p><p><span>在一个易处理的异质主体新凯恩斯模型中，我分析性地研究了流动性陷阱。异质性决定了流动性陷阱是信心驱动的还是基本面的、过度储蓄驱动的，后者可能由不平等或收入风险的冲击触发。当收入不平等和风险是反周期的时，异质性会放大流动性陷阱衰退（不依赖深度通货紧缩）、财政乘数和前瞻性指导能力。相反，当不平等和风险是顺周期的，排除了信心驱动的陷阱、新费希尔效应和前瞻性指导难题时，就会出现抑制。最优货币政策意味着前瞻性指导的持续时间因扩大其权力的相同不平等动机而被最佳地缩短</span><span>[^7]</span><span>。</span></p><p>&nbsp;</p><hr /><p>&nbsp;</p><div class='footnotes-area'  ><hr/>
+<div class='footnote-line'><span class='md-fn-count'>1</span> <span>McNerney, J., Savoie, C., Caravelli, F., Carvalho, V. M., Farmer, J. D. (2021) </span><em><span>How production networks amplify economic growth</span></em><span>.Cambridge Working Papers in Economics CWPE2183 doi: 10.17863/CAM.79744</span> <a name='dfref-footnote-1' href='#ref-footnote-1' title='回到文档' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>2</span> <span>Low Interest Rates, Market Power, and Productivity Growth </span><a href='https://doi.org/10.3982/ECTA17408' target='_blank' class='url'>https://doi.org/10.3982/ECTA17408</a> <a name='dfref-footnote-2' href='#ref-footnote-2' title='回到文档' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>3</span> <span>Credit Booms, Financial Crises and Macroprudential Policy </span><a href='https://economics.princeton.edu/working-papers/credit-booms-financial-crises-and-macroprudential-policy/' target='_blank' class='url'>https://economics.princeton.edu/working-papers/credit-booms-financial-crises-and-macroprudential-policy/</a> <a name='dfref-footnote-3' href='#ref-footnote-3' title='回到文档' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>4</span> <span>Greenwald, Daniel and Leombroni, Matteo and Lustig, Hanno N. and Van Nieuwerburgh, Stijn, Financial and Total Wealth Inequality with Declining Interest Rates (July 12, 2022). Stanford University Graduate School of Business Research Paper , Available at SSRN: </span><a href='https://ssrn.com/abstract=3789220' target='_blank' class='url'>https://ssrn.com/abstract=3789220</a><span> or </span><a href='https://dx.doi.org/10.2139/ssrn.3789220'><span>http://dx.doi.org/10.2139/ssrn.3789220</span></a> <a name='dfref-footnote-4' href='#ref-footnote-4' title='回到文档' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>5</span> <span>Daniel L. Greenwald. The Mortgage Credit Channel of Macroeconomic Transmission</span> <a name='dfref-footnote-5' href='#ref-footnote-5' title='回到文档' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>6</span> <strong><span>Bilbiie, F., Primiceri, G. E., Tambalotti, A.</span></strong><span> </span><a href='http://www.econ.cam.ac.uk/research/cwpe-abstracts?cwpe=2275'><span>Inequality and Business Cycles</span></a><span>, (2022) </span><em><span>CWPE2275</span></em> <a name='dfref-footnote-6' href='#ref-footnote-6' title='回到文档' class='reversefootnote' >↩</a></div></div></div></div>
+</body>
+</html>
