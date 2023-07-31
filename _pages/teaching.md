@@ -16,11 +16,8 @@ author_profile: true
 ## Graduate Level
 
 * DSGE与dynare实践, 南京大学, 2022秋季学期
-  [*[notes]*](https://Dali-Fu.github.io/files/Lecture/out/elegantbook-cn.pdf) 
-  [*[slides]*]( https://Dali-Fu.github.io/files/Lecture/out/Dynare操作.pdf)
-  [*[code]*](https://Dali-Fu.github.io/files/Lecture/code&data.zip)
-
 * (DSGE with dynare, NJU, 2022 Fall)
+[![notes](https://img.shields.io/badge/Notes-8A2BE2)](https://Dali-Fu.github.io/files/Lecture/out/elegantbook-cn.pdf) [![slides](https://img.shields.io/badge/sildes-emoji)](https://Dali-Fu.github.io/files/Lecture/out/Dynare操作.pdf) [![code: data](https://img.shields.io/badge/code-data-blue)](https://Dali-Fu.github.io/files/Lecture/code&data.zip)
 
 ## Undergraduate Level
 
