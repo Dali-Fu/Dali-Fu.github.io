@@ -50,7 +50,8 @@ text-align: justify}
   导致银行的流动性降低，信用创造能力下降，对商业银行体系的稳定性造成不利影响，同时会增强商业银行的利率敏感性，通过畅通利率传导渠道，提高货币政策的有效性。政策意义：在数字货币发展初期，应当 
   避免对金融稳定产生负面影响，但是央行对数字货币的准备金政策应当是动态调整的，在数字货币发展的中后期应当充分发挥数字货币对货币政策效果的积极作用。 
   </details>
-  ![摘要](https://img.shields.io/badge/摘要-abstract-8A2BE2)
+
+![摘要](https://img.shields.io/badge/摘要-abstract-8A2BE2)
 
 ## Work in Progress
 
