@@ -63,6 +63,9 @@ text-align: justify}
 |
 |
 
+<a href="#preface">前言</a>
+<a id="preface">前言</a>
+
 ## Publications
 
 📃 [孙宁华，**付大利.** "法定数字货币畅通国内大循环的理论逻辑与作用机制"，学习与实践，2023年第3期](https://kns.cnki.net/kcms2/article/abstract?v=3uoqIhG8C44YLTlOAiTRKu87-SJxoEJu6LL9TJzd50kxTBeG-wrkloyyU2yvjngJWkKkH3Wn5889-3lvsA_4BsdeUI-R5F6g&uniplatform=NZKPT)
