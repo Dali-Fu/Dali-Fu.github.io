@@ -53,18 +53,7 @@ text-align: justify}
 
 📑[金融业态多样性与经济韧性：基于共生理论的视角]
 
-
-[共同富裕的实现路径：国际比较与历史经验](#abstract1)
-|
-|
-|
-|
-<a id="abstract1">测试2</a>
-|
-|
-
-<a href="#preface">前言</a>
-<a id="preface">前言</a>
+<p hidden>[共同富裕的实现路径：国际比较与历史经验]<\p>
 
 ## Publications
 
