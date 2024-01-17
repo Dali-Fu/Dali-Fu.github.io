@@ -33,7 +33,7 @@ text-align: justify}
 
 📃 <u>政府债务扩张与真实利率变动:理论与实践</u>   &emsp;  w/耿智(Geng Zhi)
 
-  * ![摘要](https://img.shields.io/badge/摘要-abstract-8A2BE2) [![下载: download](https://img.shields.io/badge/下载-download-green)](https://Dali-Fu.github.io/files/404.md) [![工作论文版本](https://img.shields.io/badge/工作论文版本-emoji)](https://Dali-Fu.github.io/files/404.md) [![slides](https://img.shields.io/badge/sildes-red)](https://Dali-Fu.github.io/files/404.md) ![code: data](https://img.shields.io/badge/code-data-blue)
+  * [![摘要](https://img.shields.io/badge/摘要-abstract-8A2BE2)](https://Dali-Fu.github.io/files/abstract1.md) [![下载: download](https://img.shields.io/badge/下载-download-green)](https://Dali-Fu.github.io/files/404.md) [![工作论文版本](https://img.shields.io/badge/工作论文版本-emoji)](https://Dali-Fu.github.io/files/404.md) [![slides](https://img.shields.io/badge/sildes-red)](https://Dali-Fu.github.io/files/404.md) ![code: data](https://img.shields.io/badge/code-data-blue)
 
 📃 <u>产业数字化的“周期平抑”效应.</u>     &emsp; w/Li Chenyang
 
