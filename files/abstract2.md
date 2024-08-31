@@ -2,7 +2,7 @@
 title: "Talks"
 excerpt: "内容摘要"
 sitemap: false
-permalink: /talks/
+permalink: /abstract2.html
 author_profile: true
 ---
 
