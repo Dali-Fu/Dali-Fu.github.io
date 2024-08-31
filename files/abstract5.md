@@ -1,8 +1,7 @@
 ---
-title: "内容简介"
-excerpt: "Page not found. Your pixels are in another canvas."
-sitemap: false
-permalink: /blog posts/
+title: "research"
+excerpt: "内容摘要"
+permalink: /about.html
 author_profile: true
 ---
 
