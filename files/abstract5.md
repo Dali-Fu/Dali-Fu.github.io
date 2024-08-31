@@ -1,5 +1,6 @@
 ---
 title: "Talks"
+excerpt: "内容摘要"
 sitemap: false
 permalink: /talks/
 author_profile: true
