@@ -1,8 +1,7 @@
 ---
-title: "Talks"
+title: "research"
 excerpt: "内容摘要"
-sitemap: false
-permalink: /about.html
+permalink: /research/
 author_profile: true
 ---
 
