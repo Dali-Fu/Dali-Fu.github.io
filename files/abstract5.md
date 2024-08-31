@@ -1,7 +1,6 @@
 ---
 title: "research"
 excerpt: "内容摘要"
-permalink: /404.html
 author_profile: true
 ---
 
