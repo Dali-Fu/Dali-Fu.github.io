@@ -13,7 +13,3 @@ typora-copy-images-to: upload
 * [**一些有用的链接（some useful links）**](https://www.jianguoyun.com/p/DRnteL8QjtiKCRju6vQEIAA)
 * [**MacroeconReadingGroup**](https://Dali-Fu.github.io/files/MacroeconReadingGroup)
 * [**SomeJournalLists**](https://Dali-Fu.github.io/files/SomeJournalList)
-
-https://github.com/Dali-Fu/Dali-Fu.github.io/blob/main/files/Some%20Journal%20List.md
-
-https://Dali-Fu.github.io/files/SomeJournalList
