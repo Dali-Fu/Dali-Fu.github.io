@@ -1,4 +1,3 @@
-# Some Journal List
 
 - [The North American Journal of Economics and Finance](https://www.sciencedirect.com/journal/the-north-american-journal-of-economics-and-finance)
 
