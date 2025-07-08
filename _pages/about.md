@@ -1,7 +1,7 @@
 ---
 permalink: /
-title: "付大利(Daily Fu)"
-excerpt: "Daily, Fu"
+title: "Dali Fu(付大利)"
+excerpt: "Dali, Fu"
 author_profile: true
 redirect_from: 
   - /about/
