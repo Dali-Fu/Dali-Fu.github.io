@@ -31,15 +31,19 @@ text-align: justify}
 
 ## Working Papers
 
-📃 <u>公共债务扩张与资本成本变动：流动性注入还是挤占投资？</u>   &emsp;  w/[孙宁华](https://nubs.nju.edu.cn/snh/list.htm)
+📃 [孙宁华](https://nubs.nju.edu.cn/snh/list.htm)、**付大利**，<u>公共债务扩张与资本成本变动：流动性注入还是挤占投资？</u>  
   * 江苏青年经济学者论坛优秀论文奖    2023年11月
   * [![摘要](https://img.shields.io/badge/摘要-abstract-8A2BE2)](https://Dali-Fu.github.io/files/abstract5.html) [![下载: download](https://img.shields.io/badge/下载-download-green)](https://Dali-Fu.github.io/files/404.md) [![工作论文版本](https://img.shields.io/badge/工作论文版本-emoji)](https://Dali-Fu.github.io/files/404.md) [![slides](https://img.shields.io/badge/sildes-red)](https://Dali-Fu.github.io/files/404.md) ![code: data](https://img.shields.io/badge/code-data-blue)
 
-📃 <u>政府债务扩张与真实利率变动:理论与实践</u>   &emsp;  w/耿智(Geng Zhi)
+📃 **付大利**、耿智、孙宁华，<u>政府债务置换的宏观经济效应及其传导机制——基于安全资产短缺的视角分析</u>
 
   * [![摘要](https://img.shields.io/badge/摘要-abstract-8A2BE2)](https://Dali-Fu.github.io/files/abstract1.html) [![下载: download](https://img.shields.io/badge/下载-download-green)](https://Dali-Fu.github.io/files/404.md) [![工作论文版本](https://img.shields.io/badge/工作论文版本-emoji)](https://Dali-Fu.github.io/files/404.md) [![slides](https://img.shields.io/badge/sildes-red)](https://Dali-Fu.github.io/files/404.md) ![code: data](https://img.shields.io/badge/code-data-blue)
 
-📃 <u>产业数字化的“周期平抑”效应.</u>     &emsp; w/Li Chenyang
+📃 **付大利**、孙宁华，<u>地方政府债务、非税收入激励与增长陷阱——运行机制与宏观效应</u> 
+
+  * [![摘要](https://img.shields.io/badge/摘要-abstract-8A2BE2)](https://Dali-Fu.github.io/files/abstract1.html) [![下载: download](https://img.shields.io/badge/下载-download-green)](https://Dali-Fu.github.io/files/404.md) [![工作论文版本](https://img.shields.io/badge/工作论文版本-emoji)](https://Dali-Fu.github.io/files/404.md) [![slides](https://img.shields.io/badge/sildes-red)](https://Dali-Fu.github.io/files/404.md) ![code: data](https://img.shields.io/badge/code-data-blue)
+
+📃 <u>产业数字化的“周期平抑”效应.</u>     &emsp;
 
   * [![摘要](https://img.shields.io/badge/摘要-abstract-8A2BE2)](https://Dali-Fu.github.io/files/abstract2.html) [![下载: download](https://img.shields.io/badge/下载-download-green)](https://Dali-Fu.github.io/files/404.md) [![工作论文版本](https://img.shields.io/badge/工作论文版本-emoji)](https://Dali-Fu.github.io/files/404.md) [![slides](https://img.shields.io/badge/sildes-red)](https://Dali-Fu.github.io/files/404.md) ![code: data](https://img.shields.io/badge/code-data-blue)
 
@@ -50,9 +54,15 @@ text-align: justify}
 
 ## Work in Progress
 
-📑[数字货币、货币政策工具与最优货币规则]
+📑政府债务扩张及其治理——理论分析框架、宏观效应与政策应对
 
 📑[金融业态多样性与经济韧性：基于共生理论的视角]
+
+📑[数字货币、货币政策工具与最优货币规则]
+
+📑重回可分劳动——不确定冲击视角下的灵活就业与周期波动
+
+
 
 ## Publications
 
