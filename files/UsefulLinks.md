@@ -1,15 +1,3 @@
----
-title: ' 一些有用的网页（some useful links）'
-date: 2013-08-14
-permalink: /posts/2013/08/blog-post-2/
-tags:
-  - cool posts
-  - category1
-  - category2
----
-
-根据公开资源整理
-
 1.专业平台
 ======
 
