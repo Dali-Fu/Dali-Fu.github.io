@@ -24,7 +24,7 @@
 - **ECTA** &nbsp;&nbsp;&nbsp; [*Econometrica*] &nbsp;&nbsp;&nbsp; [**Content**](https://ideas.repec.org/s/wly/emetrp.html):&nbsp;&nbsp;&nbsp; [**Data & Programs**](https://www.econometricsociety.org/publications/econometrica/browse) 
 - **RES** &nbsp;&nbsp;&nbsp; [*The Review of Economic Studies*]&nbsp;&nbsp;&nbsp;  [**Content**](https://ideas.repec.org/s/oup/restud.html)：&nbsp;&nbsp;&nbsp;**Dataverse** [2020年5月之前](https://academic.oup.com/restud/issue/87/1)      [2020年5月及以后](https://zenodo.org/communities/restud-replication/?page=1&size=20) 
 - **QJE**&nbsp;&nbsp;&nbsp; [*The Quarterly Journal of Economics*] &nbsp;&nbsp;&nbsp;  [**Content**](https://ideas.repec.org/s/oup/qjecon.html):&nbsp;&nbsp;&nbsp; [**Dataverse**](https://academic.oup.com/qje)    
-- **JPE** &nbsp;&nbsp;&nbsp; [*Journal of Political Economy*] &nbsp;&nbsp;&nbsp; [**Content**](https://ideas.repec.org/s/ucp/jpolec.html):&nbsp;&nbsp;&nbsp; [**Supplemental Material**](https://www.journals.uchicago.edu/toc/jpe/current)   
+- **JPE** &nbsp;&nbsp;&nbsp; [Journal of Political Economy](https://dataverse.harvard.edu/dataverse/JPE) &nbsp;&nbsp;&nbsp; [**Content**](https://ideas.repec.org/s/ucp/jpolec.html):&nbsp;&nbsp;&nbsp; [**Supplemental Material**](https://www.journals.uchicago.edu/toc/jpe/current)   
 
 ------
 - **RED** Review of Economic Dynamics [**Computer Codes**](https://link.zhihu.com/?target=https%3A//ideas.repec.org/s/red/ccodes.html) **基本都有代码**数据保存在[**REPEC**](https://www.economicdynamics.org/RED15.htm)
@@ -202,13 +202,19 @@
 - [Daniel L. Greenwald](https://www.dlgreenwald.com/)
 - [Pascal Paul – Federal Reserve Bank of San Francisco](https://www.pascalpaul.de/)
 - [Paul Beaudry - Bank of Canada](https://www.bankofcanada.ca/profile/paul-beaudry/)
-- ==**PublicEco&Inequality （Wealth）**==
-- [Gabriel Zucman (gabriel-zucman.eu)](https://gabriel-zucman.eu/)
-- [Antoine Bozio ](https://www.parisschoolofeconomics.com/bozio-antoine/en/index.htm)
-- [Thomas Piketty ](http://piketty.pse.ens.fr/en/)
-- [RAJ CHETTY](https://rajchetty.com/)
-- [Robert Kirkby](https://www.robertdkirkby.com/)
-- [**Thomas Winberry**](https://www.thomaswinberry.com/research/index.html) 沃顿商学院
+- **PublicEco&Inequality （Wealth）**
+  - [Gabriel Zucman (gabriel-zucman.eu)](https://gabriel-zucman.eu/)
+  - [Antoine Bozio ](https://www.parisschoolofeconomics.com/bozio-antoine/en/index.htm)
+  - [Thomas Piketty ](http://piketty.pse.ens.fr/en/)
+  - [RAJ CHETTY](https://rajchetty.com/)
+  - [Robert Kirkby](https://www.robertdkirkby.com/)
+  - [**Thomas Winberry**](https://www.thomaswinberry.com/research/index.html) 沃顿商学院
+
+- HANK: [Sequence-Space Jacobian](https://github.com/shade-econ/sequence-jacobian/#sequence-space-jacobian)
+  - [Adrien Auclert](https://aauclert.people.stanford.edu/research)
+  - [Matthew Rognlie](https://sites.northwestern.edu/rognlie/research/)
+  - [Ludwig Straub](https://straub.scholars.harvard.edu/research)
+
 
 6.Mini Group
 ------
