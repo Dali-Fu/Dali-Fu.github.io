@@ -42,10 +42,6 @@ text-align: justify}
 
 ## Working Papers
 
-📃 [孙宁华](https://nubs.nju.edu.cn/snh/list.htm)、**付大利**，<u>公共债务扩张与资本成本变动：流动性注入还是挤占投资？</u>  
-  * 江苏青年经济学者论坛优秀论文奖    2023年11月
-  * [![摘要](https://img.shields.io/badge/摘要-abstract-8A2BE2)](https://Dali-Fu.github.io/files/abstract5.html) [![下载: download](https://img.shields.io/badge/下载-download-green)](https://Dali-Fu.github.io/files/404.md) [![工作论文版本](https://img.shields.io/badge/工作论文版本-emoji)](https://Dali-Fu.github.io/files/404.md) [![slides](https://img.shields.io/badge/sildes-red)](https://Dali-Fu.github.io/files/404.md) ![code: data](https://img.shields.io/badge/code-data-blue)
-
 📃 **付大利**、耿智、孙宁华，<u>政府债务置换的宏观经济效应及其传导机制——基于安全资产短缺的视角分析</u>
 
   * [![摘要](https://img.shields.io/badge/摘要-abstract-8A2BE2)](https://Dali-Fu.github.io/files/abstract1.html) [![下载: download](https://img.shields.io/badge/下载-download-green)](https://Dali-Fu.github.io/files/404.md) [![工作论文版本](https://img.shields.io/badge/工作论文版本-emoji)](https://Dali-Fu.github.io/files/404.md) [![slides](https://img.shields.io/badge/sildes-red)](https://Dali-Fu.github.io/files/404.md) ![code: data](https://img.shields.io/badge/code-data-blue)
@@ -74,3 +70,8 @@ text-align: justify}
   * 被[《新华文摘》2023年第13期 论点摘编](https://Dali-Fu.github.io/files/新华文摘论点摘编.jfif)
   * 第十五届中国政治经济学年会    2022年11月
   * [![摘要](https://img.shields.io/badge/摘要-abstract-8A2BE2)](https://Dali-Fu.github.io/files/abstract4.html) [![下载: download](https://img.shields.io/badge/下载-download-green)](https://kns.cnki.net/kcms2/article/abstract?v=3uoqIhG8C44YLTlOAiTRKu87-SJxoEJu6LL9TJzd50kxTBeG-wrkloyyU2yvjngJWkKkH3Wn5889-3lvsA_4BsdeUI-R5F6g&uniplatform=NZKPT) [![工作论文版本](https://img.shields.io/badge/工作论文版本-emoji)](https://Dali-Fu.github.io/files/法定数字货币助力畅通国内大循环机制研究.pdf) [![slides](https://img.shields.io/badge/sildes-red)](https://Dali-Fu.github.io/files/第十五届中国政治经济学年会.pdf) [![code: data](https://img.shields.io/badge/code-data-blue)](https://Dali-Fu.github.io/files/CBCD_material.zip)
+
+📃 [孙宁华](https://nubs.nju.edu.cn/snh/list.htm),**付大利**.[公共债务扩张、流动性创造与资本成本变动资本成本变动，财经科学，2025年第9期](https://kns.cnki.net/kcms2/article/abstract?v=29aDaWKg40G25qDUFIOECllrMGD7T5kgyipGgPYQzQGlTPHdi5-Aw2SmohPX0AG_vdjQcISljjFjaCazQexWWIEpXndYJQoua_qFSQR-VKBJNtSTwedlYtKJzIKA2loz4XoaamR7OCUscrTeRrW6rwa8Q1Yg-ElB59V7huyW7cARRtBbrQcWpBy8ekwZ2hSXljIhugowAijCsjZXnxpD4w==&uniplatform=NZKPT&language=CHS)
+  * 江苏青年经济学者论坛优秀论文奖    2023年11月
+  * 封面文章
+  * [![摘要](https://img.shields.io/badge/摘要-abstract-8A2BE2)](https://Dali-Fu.github.io/files/abstract5.html) [![下载: download](https://img.shields.io/badge/下载-download-green)](https://kns.cnki.net/kcms2/article/abstract?v=29aDaWKg40G25qDUFIOECllrMGD7T5kgyipGgPYQzQGlTPHdi5-Aw2SmohPX0AG_vdjQcISljjFjaCazQexWWIEpXndYJQoua_qFSQR-VKBJNtSTwedlYtKJzIKA2loz4XoaamR7OCUscrTeRrW6rwa8Q1Yg-ElB59V7huyW7cARRtBbrQcWpBy8ekwZ2hSXljIhugowAijCsjZXnxpD4w==&uniplatform=NZKPT&language=CHS) [![工作论文版本](https://img.shields.io/badge/工作论文版本-emoji)](https://Dali-Fu.github.io/files/404.md) [![slides](https://img.shields.io/badge/sildes-red)](https://Dali-Fu.github.io/files/PubDebt_slides.pdf) ![code: data](https://img.shields.io/badge/code-data-blue)
