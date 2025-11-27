@@ -44,11 +44,11 @@ text-align: justify}
 
 📃 **付大利**、耿智、孙宁华，<u>政府债务置换的宏观经济效应及其传导机制——基于安全资产短缺的视角分析</u>
 
-  * [![摘要](https://img.shields.io/badge/摘要-abstract-8A2BE2)](https://Dali-Fu.github.io/files/abstract1.html) [![下载: download](https://img.shields.io/badge/下载-download-green)](https://Dali-Fu.github.io/files/404.md) [![工作论文版本](https://img.shields.io/badge/工作论文版本-emoji)](https://Dali-Fu.github.io/files/404.md) [![slides](https://img.shields.io/badge/sildes-red)](https://Dali-Fu.github.io/files/404.md) ![code: data](https://img.shields.io/badge/code-data-blue)
+  * [![摘要](https://img.shields.io/badge/摘要-abstract-8A2BE2)](https://Dali-Fu.github.io/files/abstract1) [![下载: download](https://img.shields.io/badge/下载-download-green)](https://Dali-Fu.github.io/files/404.md) [![工作论文版本](https://img.shields.io/badge/工作论文版本-emoji)](https://Dali-Fu.github.io/files/404.md) [![slides](https://img.shields.io/badge/sildes-red)](https://Dali-Fu.github.io/files/404.md) ![code: data](https://img.shields.io/badge/code-data-blue)
 
 📃 **付大利**、孙宁华，<u>地方政府债务、非税收入激励与增长陷阱——运行机制与宏观效应</u> 
 
-  * [![摘要](https://img.shields.io/badge/摘要-abstract-8A2BE2)](https://Dali-Fu.github.io/files/abstract1.html) [![下载: download](https://img.shields.io/badge/下载-download-green)](https://Dali-Fu.github.io/files/404.md) [![工作论文版本](https://img.shields.io/badge/工作论文版本-emoji)](https://Dali-Fu.github.io/files/404.md) [![slides](https://img.shields.io/badge/sildes-red)](https://Dali-Fu.github.io/files/404.md) ![code: data](https://img.shields.io/badge/code-data-blue)
+  * [![摘要](https://img.shields.io/badge/摘要-abstract-8A2BE2)](https://Dali-Fu.github.io/files/abstract_NonTax) [![下载: download](https://img.shields.io/badge/下载-download-green)](https://Dali-Fu.github.io/files/404.md) [![工作论文版本](https://img.shields.io/badge/工作论文版本-emoji)](https://Dali-Fu.github.io/files/404.md) [![slides](https://img.shields.io/badge/sildes-red)](https://Dali-Fu.github.io/files/404.md) ![code: data](https://img.shields.io/badge/code-data-blue)
 
 
 
