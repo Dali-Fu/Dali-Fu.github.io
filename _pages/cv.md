@@ -59,4 +59,4 @@ Service and leadership
 * Currently signed in to 43 different slack teams
 -->
 
-[Curriculum Vitae](https://Dali-Fu.github.io/files/CV_FuDali_202510.pdf)
+[Curriculum Vitae](https://Dali-Fu.github.io/files/cv_FuDali_202601.pdf)
