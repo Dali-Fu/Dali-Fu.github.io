@@ -22,3 +22,5 @@ typora-copy-images-to: upload
 
 * [**FellowEconFrontiers**](https://Dali-Fu.github.io/files/经济学学术资源追踪)
 
+* [**Some Notes Just for Fun**](https://dali-econ.github.io/economic-essays/#/)
+
