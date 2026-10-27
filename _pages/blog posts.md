@@ -24,3 +24,5 @@ typora-copy-images-to: upload
 
 * [**Some Notes Just for Fun**](https://dali-econ.github.io/economic-essays/#/)
 
+* [**Data Collection**](https://www.jianguoyun.com/p/DQawuyQQjtiKCRiLwqwGIAA) 
+
