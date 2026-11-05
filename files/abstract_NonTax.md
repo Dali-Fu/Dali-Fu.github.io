@@ -9,8 +9,7 @@
 
 >注：$C\longmapsto B$:$\tau_t^e \uparrow \longmapsto$短期成本增加，产出下降；$B\longmapsto A$:$Y \downarrow \longmapsto$消费下降，这一过程通过“财富效应”渠道传导；$A\longmapsto D$:$P \downarrow$,原因在于，长期总供给曲线移动，这一过程是$\tau_t^e \uparrow \longmapsto E_t\downarrow$对长期全要素生产率的破坏实现。至此，$C\longmapsto B \longmapsto A \longmapsto D$导致通缩——衰退的一个过程，如果不施加干预，且**引理(1)**和**引理(2)**的条件不变，上述过程将会继续下去，形成一个负向螺旋，跌入增长陷阱。
 
-<img src="img/传导机制示意图.png" alt="财政压力上升的宏观经济效应彩色" style="zoom:80%;" />
-
+![传导机制示意图](img/传导机制示意图.png)
 <center><strong>“债务压力——增长陷阱”理论机制传导</strong></center>
 >注：此处的外部冲击包括导致地方政府收入减少或者支出扩大的外部来源。例如，包括但不限于，增加政府支出的赤字政策，外部环境导致的经济下行所造成的“税基”缩小，中央要求的去杠杆政策(限制"隐性担保"城投债,当期现金流减少)
 
