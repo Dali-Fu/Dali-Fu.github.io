@@ -43,7 +43,7 @@ text-align: justify}
 ## Working Papers
 
 📃 **付大利**、孙宁华，李晨扬.<u>地方政府债务、非税收入激励与增长陷阱——运行机制与宏观效应</u> 
-
+  * 第十五届“宏观经济政策与微观企业行为”学术研讨会(西安，西安交通大学)    2026年11月
   * [![摘要](https://img.shields.io/badge/摘要-abstract-8A2BE2)](https://Dali-Fu.github.io/files/abstract_NonTax) [![下载: download](https://img.shields.io/badge/下载-download-green)](https://Dali-Fu.github.io/files/404.md) [![工作论文版本](https://img.shields.io/badge/工作论文版本-emoji)](https://Dali-Fu.github.io/files/404.md) [![slides](https://img.shields.io/badge/sildes-red)](https://Dali-Fu.github.io/files/404.md) ![code: data](https://img.shields.io/badge/code-data-blue)
 
 
